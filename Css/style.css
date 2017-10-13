@@ -6,12 +6,12 @@
 
 @font-face {
 font-family: DINPro;
-src: url(DINPro-Medium_13936.ttf); 
+src: url(../Fonts/DINPro-Medium_13936.ttf); 
 }
 
 @font-face {
 font-family: DINProReg;
-src: url(DINPro-Regular_13937.ttf); 
+src: url(../Fonts/DINPro-Regular_13937.ttf); 
 }
 
 a{
@@ -124,5 +124,23 @@ body{
 }
 
 [value="Create account"] {
-  margin-top:10px;
+  margin-top:8px;
+}
+
+[value="Show"] {
+  font-family: DINPro;
+  width: 35px;
+  height: 16px;
+  border: none;
+  position: absolute;
+  bottom: 28px;
+  right: 16px;
+  z-index: 4;
+  background-color: white;
+
+}
+
+#pos {
+  display: block;
+  position: relative;
 }
