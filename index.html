@@ -1,26 +1,34 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href="Css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
   <title>Sign page</title>
- </head>
- <body>
- <div id="container">
-   
-  <div id="logo"><a href="#"><img src="Images/logo.png" width="115" height="22"></a></div>
-
-  <p class="Log-in">Log in<p>
-  <form>
-  <p class="Email"><labeL for="firstinp">Email</labeL></p>
-  <input type="text" placeholder="user@mail.com" id="firstinp" required>
-  <p class="Password"><labeL for="secondtinp">Password</labeL></p>
-  <input type="password" placeholder="Enter your password" id="secondtinp" required>
-  <p class="Forgot-pas"><a href="#" class="pink">Forgot password?</a></p>
-  <input type="submit" value="Sing in"></input>
-  </form>
-
-  <p class="Dont-have-an-accoun">Don’t have an account?<a href="Signup.html" class="pink">&nbsp;Create account</a></p>
-</div>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+        <div class="logo"><a href="#"><img src="images/logo.png" width="47" height="22">
+          </a>
+        </div> 
+        <span>WRISTO</span>       
+    </div>
+      <p class="Log-in">Log in<p>
+      <form>
+        <p class="Email"><labeL for="firstinp">Email</labeL></p>
+        <input type="email" placeholder="user@mail.com" class="firstinp" onkeyup="checkEmailLength ()" required>
+        <p class="Password"><labeL for="secondtinp">Password</labeL></p>
+        <input type="password" placeholder="Enter your password" class="secondtinp" onkeyup="checkPasswordLength()" required>
+        <div class="error-email-password" hidden='true'><svg fill="#b52f54" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0V0z" fill="none"/>
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+          </svg><span>Invalid login or password. Please try again</span>
+        </div>
+        <p class="Forgot-pas"><a href="#" class="pink">Forgot password?</a></p>
+        <input type="submit" value="Sing in" onclick="loginInMasterPage(event)"></input>
+      </form>
+      <p class="Dont-have-an-accoun">Don’t have an account?<a href="Signup.html" class="pink">&nbsp;Create account</a></p>
+  </div>
+<script src="js/script2.js"></script>
 </body>
 </html>   

@@ -1,41 +1,74 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  border: 0;
+  outline: none;
+}
+body,html {
+  height: 100%;
+  width: 100%;
 }
 
 @font-face {
 font-family: DINPro;
-src: url(../Fonts/DINPro-Medium_13936.ttf); 
+src: url(../fonts/DINPro-Medium_13936.ttf); 
 }
 
 @font-face {
 font-family: DINProReg;
-src: url(../Fonts/DINPro-Regular_13937.ttf); 
+src: url(../fonts/DINPro-Regular_13937.ttf); 
 }
 
-a{
+a {
   text-decoration-line: none;
 }
 
-body{
+body {
     font-family: DINPro;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
     background-color: #f5f5f5;
 }
-#container {
+.container {
     width: 400px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
-#logo{
-    width: 125px;
-    padding-bottom: 153px;
-    margin: 32px auto 0 auto; 
-
+ .logo-container {
+   margin-top: 32px; 
+   display: flex;
+   justify-content: center;
+   padding-bottom: 153px;
  }
+ .logo-container span {
+  display: block;
+  color: #b52f54;
+  font-family: DINPro;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 9.5px;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  align-self: center;
+}
+
+.singup-logo-container {
+  margin-top: 32px; 
+  display: flex;
+  justify-content: center;
+  padding-bottom: 85px;
+}
+.singup-logo-container span {
+  display: block;
+ color: #b52f54;
+ font-family: DINPro;
+ font-size: 18px;
+ font-weight: bold;
+ padding-left: 9.5px;
+ text-transform: uppercase; 
+ letter-spacing: 1px;
+ align-self: center;
+}
 
  .Log-in {
     font-family: DINPro;
@@ -47,17 +80,18 @@ body{
     padding-bottom: 24px;
   }
 
-  [type="submit"] {
+  .container [type="submit"] {
     width: 400px;
     height: 40px;
     border-radius: 4px;
     background-color: #b52f54;
-    color:#ffffff;
+    color: #ffffff;
     font-family: DINPro;
     font-size: 14px;
     font-weight: 500;
+    border: none;
   }
-  input[type="text"],input[type="password"] {
+  .container input[type="text"],input[type="password"],input[type="email"] {
     width: 400px;
     height: 40px;
     border-radius: 4px;
@@ -94,7 +128,7 @@ body{
     padding-top: 8px;
   }
 
- .pink{
+ .pink {
    color: #b52f54;
  }
 
@@ -105,12 +139,12 @@ body{
   font-size: 72px;
   font-weight: 500;
   line-height: 1.33;
-  margin:0 auto;
+  margin: 0 auto;
   color: rgba(0, 0, 0, 0.5);
   padding-bottom: 21px;
 }
 
-#logo2{
+.logo2 {
     width: 125px;
     padding-bottom: 85px;
     margin: 32px auto 0 auto; 
@@ -121,13 +155,14 @@ body{
 
 .ipField {
   padding-bottom: 16px;
+  position: relative;
 }
 
 [value="Create account"] {
   margin-top:8px;
 }
 
-[value="Show"] {
+.ipField [type="button"] {
   font-family: DINPro;
   width: 35px;
   height: 16px;
@@ -140,7 +175,41 @@ body{
 
 }
 
-#pos {
+.pos {
   display: block;
   position: relative;
+}
+
+.error-password {
+  color: #b52f54;
+  margin-bottom: 15px;
+
+  
+}
+
+.error-password *{
+  vertical-align: middle;
+  
+}
+
+.error-password span{
+  padding-left: 7px; 
+}
+
+.error-email, .error-email-password {
+  color: #b52f54;
+  margin-bottom: 15px; 
+}
+
+.error-email-password {
+  padding-top: 7px;
+}
+
+.error-email *, .error-email-password *{
+  vertical-align: middle;
+  
+}
+
+.error-email span, .error-email-password span{
+  padding-left: 7px; 
 }
