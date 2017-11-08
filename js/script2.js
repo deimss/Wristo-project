@@ -27,7 +27,7 @@ function loginInMasterPage(event){
       else {
         errorEmailPasswordBlock.setAttribute('hidden','')
 			  alert("welcome!");
-			  window.location.href = "Master-page/index.html"
+			  window.location.href = "master-page.html"
     }  
   }
 }
